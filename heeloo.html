@@ -1,0 +1,67 @@
+
+<html>
+<head>	
+	<script>
+		function show1(){
+			var a=document.getElementById("tab");
+			if(a.checked==true){
+				document.getElementById("tt1").style.display="block";
+				document.getElementById("yo1").style.display="none";
+			}else{
+				document.getElementById("tt1").style.display="none";
+			}}
+		function show2(){
+			var b=document.getElementById("list");
+			if(b.checked==true){
+				document.getElementById("yo1").style.display="block";
+				document.getElementById("tt1").style.display="none";
+			}else{
+				document.getElementById("yo1").style.display="none";
+			}}
+		
+	</script>
+	<style type="text/css">
+		table,td,tr{
+			border:2px solid black;
+			background-color:cyan;
+			align:center;
+			margin:auto;
+			cell-spacing:10px;
+			cell-padding:10px;
+			padding:20px;
+			font-size:20px;
+			font-weight:strong;
+		}
+		ol{
+			border:2px solid black;
+			background-color: grey;
+			align:center;
+			margin:auto;
+			width:30%;
+			height:30%;
+			font-size: 20px;
+		}
+
+	</style>
+</head>
+<body ><form>
+	
+    <input type="radio" name="bb" id="tab" onchange="show1()">
+    <label for="tab">View Table</label><br>
+<div id="tt1" style="display:none;">
+	<table>
+			<tr><td>a</td><td>b</td><td>c</td></tr>
+			<tr><td>a</td><td>b</td><td>c</td></tr>
+			<tr><td>a</td><td>b</td><td>c</td></tr>
+	</table></div>
+
+	<input type="radio" name="bb" id="list" onchange="show2()" >
+	<label for="list">View list</label>
+	<div id="yo1" style="display:none;">
+		<h1 align="center">My List</h1>
+		<ol id="yo" >
+		<li>manya</li>
+		<li>agravi</li>
+	</ol></div>
+</form></body>
+</html>
